@@ -5,6 +5,12 @@ export const Metronome = () => {
     const [bpm, setBpm] = useState(100)
     const [playing, setPlaying] = useState(false)
 
+    const newclick = new Audio(click1)
+
+    const startStop = () => {
+        newclick.play()
+    }
+
     return (
         <div className="metronome">
            <div className="bpm-slider">
