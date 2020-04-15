@@ -18,9 +18,7 @@ export const Metronome = () => {
         if (playing === true) {
             setPlaying(false)
         } else {
-            timer = setInterval(
-                playClick,(60/bpm) * 1000
-                )
+            setCount(0)
             setPlaying(true) 
             console.log(timer)
         }
