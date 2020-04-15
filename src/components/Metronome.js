@@ -40,7 +40,7 @@ export const Metronome = () => {
         } else {
             clearInterval(timer.current)
         }
-    })
+    }, [bpm, playing, playClick, count, firstClick, secondClick])
 
     const handleBpmChange = (e)=> {
         let timer
