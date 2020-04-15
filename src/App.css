@@ -10,3 +10,14 @@
   width: 100%;
   margin: 10px;
 }
+
+.metronome button {
+  background: #6522a8;
+  padding:15px;
+  width: 100px;
+  color: #fff;
+  border: 2px #501787 solid;
+  border-radius: 15%;
+  box-shadow:  1px 1px 1px 1px gray;
+  font-size: 20px;
+}
