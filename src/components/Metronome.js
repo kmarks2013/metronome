@@ -8,8 +8,21 @@ export const Metronome = () => {
     const newclick = new Audio(click1)
 
     const startStop = () => {
-        newclick.play()
+        switch(playing) {
+            case false:
+                clearInterval(timer)
+                setPlaying(false)
+            case true :
+                let timer = setInterval(
+                //    playClick,(60/bpm) * 1000
+                )
+                setPlaying(true)
+                return newclick.play()
+            default: 
+                return null
+        }
     }
+
 
     return (
         <div className="metronome">
