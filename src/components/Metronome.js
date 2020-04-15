@@ -2,6 +2,7 @@ import React from 'react'
 
 export const Metronome = () => {
     let bpm = 100
+    let playing = false
 
     return (
         <div className="metronome">
