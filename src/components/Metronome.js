@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 export const Metronome = () => {
     const [bpm, setBpm] = useState(100)
-    let playing = false
+    const [playing, setPlaying] = useState(false)
 
     return (
         <div className="metronome">
