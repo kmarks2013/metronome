@@ -6,25 +6,27 @@ export const Metronome = () => {
     const [bpm, setBpm] = useState(100)
     const [playing, setPlaying] = useState(false)
     const [count, setCount] = useState(0)
-    const [beatsPerMeasure, setBeatsPerMeasure] = useState(4)
-
-
+    const timer = useRef()
+    const beatsPerMeasure = 4
     const firstClick = new Audio(click1)
     const secondClick = new Audio(click2)
 
+
+
     const startStop = () => {
         let timer
-        switch(playing) {
-            case true :
-                timer = setInterval(
-                   playClick,(60/bpm) * 1000
+        if (playing === true) {
+            clearInterval(timer)
+            firstClick.pause()
+            secondClick.pause()
+            console.log('i should set to x')
+            setPlaying(false)
+        } else {
+            timer = setInterval(
+                playClick,(60/bpm) * 1000
                 )
-                setPlaying(true)
-            case false:
-                clearInterval(timer)
-                setPlaying(false)
-            default: 
-                return null
+            setPlaying(true) 
+            console.log(timer)
         }
     }
 
