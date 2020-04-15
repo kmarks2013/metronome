@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import click1 from '../sounds/click1.wav'
 import click2 from '../sounds/click2.wav'
 
