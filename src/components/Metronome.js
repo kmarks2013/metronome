@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 export const Metronome = () => {
-    let bpm = 100
+    const [bpm, setBpm] = useState(100)
     let playing = false
 
     return (
