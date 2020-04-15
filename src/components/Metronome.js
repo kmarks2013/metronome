@@ -8,7 +8,7 @@ export const Metronome = () => {
         <div className="metronome">
            <div className="bpm-slider">
                 <h1>{bpm} BPM </h1>
-               <input type='range' min='50' max="240" value={bpm} />
+               <input onChange={(e) => setBpm(e.target.value)} type='range' min='50' max="240" value={bpm} />
            </div>
            <button>{playing ? "Stop" : "Start"} </button>
         </div>
