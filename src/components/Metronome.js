@@ -40,6 +40,19 @@ export const Metronome = () => {
     }
 
 
+    const handleBpmChange = (e)=> {
+        let timer
+        const bpm = e.target.value
+        if (playing){
+            clearInterval(timer)
+            timer = setInterval(playClick, (60/bpm) * 1000 )
+            setCount(0)
+            setBpm(bpm)
+        } else
+            setBpm(bpm)
+    }
+
+
     return (
         <div className="metronome">
            <div className="bpm-slider">
