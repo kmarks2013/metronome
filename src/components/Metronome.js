@@ -5,7 +5,7 @@ export const Metronome = () => {
 
     return (
         <div className="metronome">
-           <div>
+           <div className="bpm-slider">
                 <h1>{bpm} BPM </h1>
                <input type='range' min='50' max="240" value={bpm} />
            </div>
