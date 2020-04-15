@@ -9,7 +9,8 @@ export const Metronome = () => {
     const [beatsPerMeasure, setBeatsPerMeasure] = useState(4)
 
 
-    const newclick = new Audio(click1)
+    const firstClick = new Audio(click1)
+    const secondClick = new Audio(click2)
 
     const startStop = () => {
         switch(playing) {
