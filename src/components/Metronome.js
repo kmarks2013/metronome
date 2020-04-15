@@ -13,16 +13,19 @@ export const Metronome = () => {
     const secondClick = new Audio(click2)
 
     const startStop = () => {
+        let timer
         switch(playing) {
             case false:
                 clearInterval(timer)
                 setPlaying(false)
             case true :
-                let timer = setInterval(
-                //    playClick,(60/bpm) * 1000
+                timer = setInterval(
+                   playClick,(60/bpm) * 1000
                 )
                 setPlaying(true)
-                return firstClick.play()
+            case false:
+                clearInterval(timer)
+                setPlaying(false)
             default: 
                 return null
         }
