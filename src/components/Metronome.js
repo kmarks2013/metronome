@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import click1 from '../sounds/click1.wav'
+import click2 from '../sounds/click2.wav'
 
 export const Metronome = () => {
     const [bpm, setBpm] = useState(100)
