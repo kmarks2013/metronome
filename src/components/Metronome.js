@@ -16,10 +16,6 @@ export const Metronome = () => {
     const startStop = () => {
         let timer
         if (playing === true) {
-            clearInterval(timer)
-            firstClick.pause()
-            secondClick.pause()
-            console.log('i should set to x')
             setPlaying(false)
         } else {
             timer = setInterval(
