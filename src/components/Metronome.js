@@ -29,8 +29,12 @@ export const Metronome = () => {
     }
 
     const playClick = () => {
-        if (count % beatsPerMeasure === 0)
-        secondClick.play()
+        if (count % beatsPerMeasure === 0){
+            secondClick.play()
+        } else{
+            firstClick.play()
+        }
+        setCount((count + 1) % beatsPerMeasure)
     }
 
 
