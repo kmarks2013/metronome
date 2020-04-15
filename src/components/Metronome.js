@@ -28,6 +28,11 @@ export const Metronome = () => {
         }
     }
 
+    const playClick = () => {
+        if (count % beatsPerMeasure === 0)
+        secondClick.play()
+    }
+
 
     return (
         <div className="metronome">
