@@ -36,7 +36,7 @@ export const Metronome = () => {
         } else{
             firstClick.play()
         }
-        setCount((count + 1) % beatsPerMeasure)
+        setCount(prevCount => (prevCount + 1) % beatsPerMeasure)
     }
 
 
