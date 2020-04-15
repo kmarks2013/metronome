@@ -15,9 +15,6 @@ export const Metronome = () => {
     const startStop = () => {
         let timer
         switch(playing) {
-            case false:
-                clearInterval(timer)
-                setPlaying(false)
             case true :
                 timer = setInterval(
                    playClick,(60/bpm) * 1000
