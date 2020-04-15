@@ -59,7 +59,7 @@ export const Metronome = () => {
                 <h1>{bpm} BPM </h1>
                <input onChange={handleBpmChange} type='range' min='50' max="240" value={bpm} />
            </div>
-           <button onClick={() => startStop()}>{playing ? "Stop" : "Start"} </button>
+           <button onClick={startStop}>{playing ? "Stop" : "Start"} </button>
         </div>
     )
 }
