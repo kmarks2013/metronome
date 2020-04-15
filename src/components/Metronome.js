@@ -39,6 +39,14 @@ export const Metronome = () => {
         setCount(prevCount => (prevCount + 1) % beatsPerMeasure)
     }
 
+    useEffect(() => {
+        if (playing) {
+            clearInterval(timer.current)
+            timer.current = setInterval(playClick, (60/bpm) *1000)
+        } else {
+            clearInterval(timer.current)
+        }
+    })
 
     const handleBpmChange = (e)=> {
         let timer
