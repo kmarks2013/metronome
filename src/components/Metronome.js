@@ -22,7 +22,7 @@ export const Metronome = () => {
                 //    playClick,(60/bpm) * 1000
                 )
                 setPlaying(true)
-                return newclick.play()
+                return firstClick.play()
             default: 
                 return null
         }
