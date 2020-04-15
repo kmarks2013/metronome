@@ -4,6 +4,9 @@ import click1 from '../sounds/click1.wav'
 export const Metronome = () => {
     const [bpm, setBpm] = useState(100)
     const [playing, setPlaying] = useState(false)
+    const [count, setCount] = useState(0)
+    const [beatsPerMeasure, setBeatsPerMeasure] = useState(4)
+
 
     const newclick = new Audio(click1)
 
