@@ -16,15 +16,9 @@ export const Metronome = () => {
     const startStop = () => {
         let timer
         if (playing === true) {
-            clearInterval(timer)
-            firstClick.pause()
-            secondClick.pause()
-            console.log('i should set to x')
             setPlaying(false)
         } else {
-            timer = setInterval(
-                playClick,(60/bpm) * 1000
-                )
+            setCount(0)
             setPlaying(true) 
             console.log(timer)
         }
@@ -36,9 +30,17 @@ export const Metronome = () => {
         } else{
             firstClick.play()
         }
-        setCount((count + 1) % beatsPerMeasure)
+        setCount(prevCount => (prevCount + 1) % beatsPerMeasure)
     }
 
+    useEffect(() => {
+        if (playing) {
+            clearInterval(timer.current)
+            timer.current = setInterval(playClick, (60/bpm) *1000)
+        } else {
+            clearInterval(timer.current)
+        }
+    }, [bpm, playing, playClick, count, firstClick, secondClick])
 
     const handleBpmChange = (e)=> {
         let timer
